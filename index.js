@@ -19,9 +19,10 @@ function nowServing(katzDeliLine) {
 
   return `Currently serving ${katzDeliLine.shift()}.`;
 }
+let counterVariable = 1;
+function takeANumber(katzDeliLine) {
+  katzDeliLine.push(counterVariable);
+  counterVariable++;
 
-function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name)
-
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+  return `You are number ${katzDeliLine.length} in line.`
 }
